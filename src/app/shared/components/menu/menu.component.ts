@@ -21,7 +21,7 @@ export class MenuComponent {
             {
               label: 'Textos y Fechas',
               icon: 'pi pi-align-left',
-              routerLink:'/'
+              routerLink: '/'
             },
             {
               label: 'Números',
