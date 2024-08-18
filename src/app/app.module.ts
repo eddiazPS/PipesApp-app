@@ -11,7 +11,7 @@ import { SharedModule } from './shared/shared.module';
 // configuracion del locale de la app
 import localeEsCO from '@angular/common/locales/es-CO';
 import localeFrCA from '@angular/common/locales/fr-CA';
-import { registerLocaleData } from '@angular/common'
+import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common'
 
 registerLocaleData (localeEsCO);
 registerLocaleData (localeFrCA);
@@ -29,7 +29,8 @@ registerLocaleData (localeFrCA);
 
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'es-CO'}
+    { provide: LOCALE_ID, useValue: 'es-CO'},
+    { provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })
